@@ -41,8 +41,7 @@ function checkAnswers(answer) {
 
 function inPoliceBox() {  // L1S1
 	story("You decide to go inside this stange box and inside...What’s this?...it's bigger on the inside?\
-\nJust then you hear someone say “Welcome to my TARDIS, that\'s Time And Relative Dimensions in Space for short.\ 
-\nI\'m The Doctor.” your not sure who this is but you ask \"Doctor Who?\". The Doctor then says \"Exactly so+name+Exactly so.\
+\nJust then you hear someone say “Welcome to my TARDIS, that\'s Time And Relative Dimensions in Space for short. I\'m The Doctor.” your not sure who this is but you ask \"Doctor Who?\". The Doctor then says \"Exactly so+name+Exactly so.\
 \n So, all of time and space, where do you wanna start?\""); 
 	choices = ["TIme Of NIM", "Time of MultiPractice", "Present day",];
 	answer = setOptions(choices);    
