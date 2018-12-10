@@ -11,7 +11,7 @@ var spin = 0;
 
 var start = function () {
     setup(); // Helper Function
-    town();  // Change this to fit your first scene
+    discoverPoliceBox();  // Change this to fit your first scene
 }
 
 window.onload = start;  // Kicks off program
@@ -28,27 +28,24 @@ function checkAnswers(answer) {
 }
 
 
- function town(){  // FIRST SCENE - WELCOMES PLAYER
+ function discoverPoliceBox(){  // FIRST SCENE (Default)- WELCOMES PLAYER
   var name = prompt("what is your name?");
-  story("One day you are on your way home from school and you hear a whisper coming from a dark forest you never remember seeing before\
-  \nCome here " + name + " Come here\
-  \nYou can't place the voice, but there is something familiar about it. What do you do?");
+  story("You are walking home from school and you then hear a weird sound from the woods.\
+\nSuddenly a strange blue police box comes into view.\
+You are not sure how it got there but you go up to it for a closer inspection.  What do you do?");
   
-  choices = ["Think some more", "go into the forest", "ignore it and go home"];
+  choices = ["Enter Police Box", "Ignore it", "Examine it"];
   answer = setOptions(choices);
  }
   
+//SCENE BREAK
+
+function inPoliceBox() {  // SET A SCENE
+	story("You decide to go inside this stange box"); 
+	choices = ["Candy house", "Fruit vender", "Field", "Hang out here", "spin in a circle"];
+	answer = setOptions(choices);    
+ }
   
-/* function forest() {  // SET A SCENE
- * story("There is a house made of candy\
- * \nThere is a fruit vender\
- * \nThere is a small opening in the trees with a ring of mushroom in the middle");
- * 
- * choices = ["Candy house", "Fruit vender", "Field", "Hang out here", "spin in a circle"];
- * answer = setOptions(choices);
- *    
- * }
- */ 
  
 /* function spinInCircle() { // CHANGE VALUE IF RETURN
  *     spin = spin + 1;
@@ -84,3 +81,5 @@ function checkAnswers(answer) {
  * 
  * } 
  */
+
+//SCENE BREAK
