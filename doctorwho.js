@@ -20,14 +20,14 @@ function checkAnswers(answer) {
         case "Enter Police Box":
             inPoliceBox();
             break;
-        case "go in":
-            enterForest();
+        case "Ignore it":
+            ignoreBox();
             break;
 	}
 }
 
-
- function discoverPoliceBox(){  // FIRST SCENE (Default)- WELCOMES PLAYER
+//Scenes are treaded like index values
+ function discoverPoliceBox(){  // FIRST SCENE (Default (L1S0))- WELCOMES PLAYER
   var name = prompt("What is your name?(This will be important later):");
   story("You are walking home from school and you then hear a weird sound from the woods.\
 \nSuddenly a strange blue police box comes into view.\
@@ -39,17 +39,18 @@ function checkAnswers(answer) {
   
 //SCENE BREAK
 
-function inPoliceBox() {  // SET A SCENE
+function inPoliceBox() {  // L1S1
 	story("You decide to go inside this stange box and inside...What’s this?...it's bigger on the inside?\
 \nJust then you hear someone say “Welcome to my TARDIS, that\'s Time And Relative Dimensions in Space for short.\ 
-"\nI\'m The Doctor.” your not sure who this is but you ask \"Doctor Who?\". The Doctor then says \" Exactly so+name+Exactly so. So, all of time and space, where do you wanna start?\""); 
-	choices = ["", "Fruit vender", "Field", "Hang out here", "spin in a circle"];
+\nI\'m The Doctor.” your not sure who this is but you ask \"Doctor Who?\". The Doctor then says \"Exactly so+name+Exactly so.\
+\n So, all of time and space, where do you wanna start?\""); 
+	choices = ["TIme Of NIM", "Time of MultiPractice", "Present day",];
 	answer = setOptions(choices);    
  }
   
  
-function ignoreBox() { // CHANGE VALUE IF RETURN
-    
+function ignoreBox() { // L1S2
+	
  * }
  */
  
