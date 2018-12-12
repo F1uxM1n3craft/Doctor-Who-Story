@@ -40,26 +40,27 @@ function checkAnswers(answer) {
 //SCENE BREAK
 
 function inPoliceBox() {  // L1S1
-	story("You decide to go inside this stange box and inside...What’s this?...it's bigger on the inside?\
-\nJust then you hear someone say “Welcome to my TARDIS, that\'s Time And Relative Dimensions in Space for short. I\'m The Doctor.” your not sure who this is but you ask \"Doctor Who?\". The Doctor then says \"Exactly so+name+Exactly so.\
+	story("You decide to go inside this strange box and inside...What\'s this?...it\'s bigger on the inside?\
+\nJust then you hear someone say \"Welcome to my TARDIS, that\'s Time And Relative Dimensions in Space for short. I\'m The Doctor.""\
+\n you're not sure who this is but you ask \"Doctor Who?\". The Doctor then says \"Exactly so"+name+"Exactly so.\
 \n So, all of time and space, where do you wanna start?\""); 
-	choices = ["TIme Of NIM", "Time of MultiPractice", "Present day",];
+	choices = ["Time Of NIM", "Time of MultiPractice", "Present day",];
 	answer = setOptions(choices);    
  }
   
  
 function ignoreBox() { // L1S2
 	
- * }
- */
+  }
  
-/* function examineBox() { // Message Example
- * messages=["so your too good to talk to me huh",
- *         "big old person too proud to talk to a pixie",
- *         " you hear the pixie fly away in disgust"];
- *    delayText(messages, 3000, field);
- * 
- * } 
- */
+ 
+function examineBox() { // Message Example
+ messages=["so your too good to talk to me huh",
+         "big old person too proud to talk to a pixie",
+         " you hear the pixie fly away in disgust"];
+     delayText(messages, 3000, field);
+ 
+ } 
+ 
 
 //SCENE BREAK
