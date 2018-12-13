@@ -1,6 +1,18 @@
 var buttonElement = document.getElementById("button1");
 
 
+
+function setup() {
+    // setOptions();
+    setOptions(["test 1", "test 2", "test3"]); 
+    var buttonElement = document.getElementById("button1");
+    buttonElement.innerHTML = "What will you do?"; 
+    buttonElement.onclick = function () {
+    var dropdown = document.getElementById("choices");
+    console.log(dropdown.value);
+    checkAnswers(dropdown.value);
+}
+}
 function story(text) {
     var currentStoryElement = document.getElementById("currentStory");
     currentStoryElement.innerHTML = text;
@@ -32,17 +44,4 @@ function delayText(text, delay) {
     var timer = setInterval(function () {
         callback(text);
     }, delay);
-}
-
-
-function setup() {
-    // setOptions();
-    setOptions(["test 1", "test 2", "test3"]); 
-    var buttonElement = document.getElementById("button1");
-    buttonElement.innerHTML = "Do Current Action"; 
-    buttonElement.onclick = function () {
-    var dropdown = document.getElementById("choices");
-    console.log(dropdown.value);
-    checkAnswers(dropdown.value);
-}
 }
