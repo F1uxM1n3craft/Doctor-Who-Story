@@ -27,13 +27,20 @@ function checkAnswers(answer) {
             break;
 		case "Go inside box":
 			inPoliceBox();
+			break;
+		case "test":
+			testNim();
+			break;
+		case "Time of NIM":
+			timeSetNim();
+			break;
 	}
 }
 
 // Scenes are treated like index values
 function discoverPoliceBox(){  
 // FIRST SCENE (Default (L1S0))- WELCOMES PLAYER
-	var name = prompt("What is your name? This will be important later:");
+	name = prompt("What is your name? This will be important later:");
 	story("You are walking home from school and you then hear a weird sound from the woods.<br><br> Suddenly a strange blue police box comes into view.<br><br> You are not sure how it got there but you go up to it for a closer inspection.  What do you do?");
 	choices = ["Enter Police Box", "Ignore it", "Examine it"];
 	answer = setOptions(choices);
@@ -42,8 +49,8 @@ function discoverPoliceBox(){
 //SCENE BREAK; DEFAULT
 
 function inPoliceBox() {  // L1S1
-	story("You decide to go inside this strange box and inside...What\'s this?...it\'s bigger on the inside?<br><br> Just then you hear someone say \"Welcome to my TARDIS, that\'s Time And Relative Dimensions in Space for short. I\'m The Doctor.\" <br><br> You\'re not sure who this is but you ask \"Doctor? Doctor Who?\". The Doctor then says \"Exactly so,\"+name+\"Exactly so.\" <br><br> So, all of time and space, where do you wanna start?");
-	choices = ["Time Of NIM", "Time of MultiPractice", "Present day",];
+	story("You decide to go inside this strange box and inside...What\'s this?...it\'s bigger on the inside?<br><br> Just then you hear someone say \"Welcome to my TARDIS, that\'s Time And Relative Dimensions in Space for short. I\'m The Doctor.\" <br><br> You\'re not sure who this is but you ask \"Doctor? Doctor Who?\". The Doctor then says \"Exactly so, "+name+" Exactly so. So tell me, all of time and space, where do you wanna start?");
+	choices = ["Time of NIM", "Time of MultiPractice", "Stay in Present"];
 	answer = setOptions(choices);    
  }
  
@@ -63,11 +70,13 @@ function examineBox() {  // L1S3
 
 //SCENE BREAK; 1ST THREE CHOICE SCENES
 
-// function inPoliceBox() {  // L1S4
-	// story("You decide to go inside this strange box and inside...What\'s this?...it\'s bigger on the inside?<br><br> Just then you hear someone say \"Welcome to my TARDIS, that\'s Time And Relative Dimensions in Space for short. I\'m The Doctor.\" <br><br> You\'re not sure who this is but you ask \"Doctor? Doctor Who?\". The Doctor then says \"Exactly so,\"+name+\"Exactly so.\" <br><br> So, all of time and space, where do you wanna start?");
-	// choices = ["Time Of NIM", "Time of MultiPractice", "Present day",];
-	// answer = setOptions(choices);    
- // }
+function timeSetNim() {  // L1S6
+	story("You travel through time and space with the Doctor and you reach the time where Nim was first made. \"We\'re here!\" says the Doctor. You and the Doctor exit the TARDIS and explore the time. After awhile you find the creator of Nim. They ask \"do you choose to play a simple version of Nim or would you like to practice?");
+	choices = ["Simple Version", "Tutor Version", "Present day"];
+	answer = setOptions(choices);    
+}
+
+
  
 // function ignoreBox() {  // L1S5
 	// story("You decide that it isn't the best thing to worry about and you go home. You didn’t choose to go on an adventure. Maybe if its still there you can be on a great adventure.<br><br>*The Next Morning*<br><br>You wake up suddenly from a familiar sound and check outside your bedside window. What’s this? It's the same police box from the forest! How did it get there? You grab your coat and things and go outside your house to investigate the box. What do you do now?")
